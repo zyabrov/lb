@@ -7,9 +7,9 @@ def hello():
 
 @app.route('/', methods=['GET'])
 def sample():
-    response = "status 200"
-    
-    return 'Был получен GET-запрос.'
+    response = {"status": "200}
+    response = response.json()
+    return response
   
 
 if __name__ == "__main__":
