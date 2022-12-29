@@ -1,6 +1,6 @@
 from app import app
 from app import adminbot
-from flask import Flask, request
+from flask import request
 
 
 
