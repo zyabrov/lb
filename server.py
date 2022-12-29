@@ -7,7 +7,6 @@ from adminbot import tg, Webhook
 @app.route('/adminbot', methods=['POST'])
 def telegram_request():
     print('Got Webhook')
-    app.register_blueprint(tg, url_prefix="/adminbot")
     json_string = request.get_data().decode('utf-8')
     req = Webhook(json_string)
     req.update()
