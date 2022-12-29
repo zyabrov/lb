@@ -2,8 +2,6 @@ import telebot
 from flask import Blueprint
 import credentials
 
-tg_bot = Blueprint('tg_bot', __name__)
-
 bot = telebot.TeleBot(credentials.bot_token)
 
 
