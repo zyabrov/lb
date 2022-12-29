@@ -1,14 +1,14 @@
 from app import app
 from app import adminbot
-from flask import request, Blueprint
-from adminbot import tg, Webhook
+from flask import Flask, request
+
 
 
 @app.route('/adminbot', methods=['POST'])
 def telegram_request():
     print('Got Webhook')
     json_string = request.get_data().decode('utf-8')
-    req = Webhook(json_string)
+    req = adminbot.Webhook(json_string)
     req.update()
     
 
